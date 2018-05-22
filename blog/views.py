@@ -3,22 +3,10 @@ from __future__ import unicode_literals
 from django.http import HttpResponse
 from django.shortcuts import render
 
-
-def home(request):
-
-	name = [
-	"Leonardo Ribeiro",
-	"Gabriel Sousa",
-	"Gabriela Lima"
-	]
-
-	languages = [
-	'Python', 'PHP', 'JavaScript', 'NodeJS'
-	]
-
+def numerais(request):
+	lista = range(1,1000)
 	context = {
-		'names': name,
-		'languages': languages
+		'numerais': lista 
 	}
 
-	return render(request, 'blog/home.html', context)
+	return HttpResponse(lista)
