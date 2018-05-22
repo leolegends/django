@@ -5,4 +5,20 @@ from django.shortcuts import render
 
 
 def home(request):
-	return render(request, 'blog/home.html')
+
+	name = [
+	"Leonardo Ribeiro",
+	"Gabriel Sousa",
+	"Gabriela Lima"
+	]
+
+	languages = [
+	'Python', 'PHP', 'JavaScript', 'NodeJS'
+	]
+
+	context = {
+		'names': name,
+		'languages': languages
+	}
+
+	return render(request, 'blog/home.html', context)
