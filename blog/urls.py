@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from blog import views
-from blog import homeController
+from blog.controllers import homeController
 
 '''
 Trabalhando com homeController.
