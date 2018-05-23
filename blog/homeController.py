@@ -15,22 +15,16 @@ def home(request):
 
 	category = Category.objects.all()
 
-	name = [
-	"Leonardo Ribeiro",
-	"Gabriel Sousa",
-	"Gabriela Lima"
-	]
+	# languages = [
+	# 'Python', 'PHP', 'JavaScript', 'NodeJS'
+	# ]
 
-	languages = [
-	'Python', 'PHP', 'JavaScript', 'NodeJS'
-	]
+	# for language in languages:
+	# 	Category.objects.create(name=lang)
 
 	context = {
-		'names': name,
-		'languages': languages,
 		'categories': category
 	}
-
 
 # aqui eu crio um registro na model category 
 # Category.objects.create(name="Python")
