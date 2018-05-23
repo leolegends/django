@@ -6,19 +6,9 @@
 	</head>
 	<body>
 		<ul>
-			{% for language in languages %}
-			
-			{% if language == 'PHP' %}
-				<B>{{language}}</B>
-			{%else%}
-				<i>{{language}}</i>
-			{%endif%}
-			{% endfor %}
-		</ul>
-			<ul>
-			{% for name in names %}
-			<li>{{name}}</li>
-			{% endfor %}
+			{%for category in categories%}
+				<li>{{category.name}}</li>
+			{%endfor%}
 		</ul>
 
 	</body>
