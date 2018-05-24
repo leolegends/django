@@ -19,5 +19,11 @@ from blog import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home)
+    url(r'^$', views.home),
+	url(r'^idade/', views.idade),
+	url(r'^nome/',views.nome),
+	url(r'^email/', views.email),
+	url(r'^nomeDaMae/', views.nomeDaMae),
+	url(r'^nomeDoPai/', views.nomeDoPai)
+
 ]
