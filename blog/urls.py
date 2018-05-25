@@ -7,11 +7,6 @@ Trabalhando com homeController.
 '''
 
 urlpatterns = [
-
-	
 	url(r'^$', home.home),
 	url('numerais/', views.numerais),
-
-
-
 ]
