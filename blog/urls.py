@@ -7,5 +7,6 @@ Trabalhando com homeController.
 '''
 
 urlpatterns = [
-	url(r'^$', home.home)
+	url(r'^$', home.home),
+	url(r'category/(?P<category_id>\d+)', home.posts_por_category)
 	]

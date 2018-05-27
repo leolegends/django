@@ -55,3 +55,16 @@ def home(request):
 def inicio(request):
 	return HttpResponse('response')
 
+
+def posts_por_category(request, category_id):
+	all_categories = Category.objects.all()	
+	category = Category.objects.get(pk=category_id)
+	posts = Post.objects.filter(category=category, status='Published')
+
+	context = {
+		'posts': posts,
+		'categories': all_categories,
+		'category': category
+	}
+
+	return render(request, 'blog/home.html', context)
