@@ -50,3 +50,8 @@ def home(request):
 # Category.objects.create(name="Python")
 
 	return render(request, 'blog/home.html', context)
+
+
+def inicio(request):
+	return HttpResponse('response')
+
