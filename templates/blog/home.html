@@ -11,7 +11,11 @@
 			<h1>Leonardo</h1>
 			<ul>
 				{%for category in categories%}
-					<li>{{category.name}}</li>
+					<li>
+					<a href="{% url 'blog.posts_por_category' category.pk %}">
+						{{category.name}}
+					</a>
+					</li>
 				{%endfor%}
 			</ul>
 			<hr>
