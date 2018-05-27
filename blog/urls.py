@@ -7,5 +7,5 @@ Trabalhando com homeController.
 '''
 
 urlpatterns = [
-	url(r'^$', home.inicio)
+	url(r'^$', home.home)
 	]

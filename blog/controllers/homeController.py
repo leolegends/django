@@ -28,22 +28,21 @@ def home(request):
 
 	# Para pegar categoria 
 
-	category_python = Category.objects.get(name='PHP')
+	# category_python = Category.objects.get(name='PHP')
 
-	post = Post()
-	post.name = "Leonardo Ribeiro"
-	post.content = "Minha tia se chama Deiliete"
-	post.status = "Published"
-	post.category = category_python
-	post.save()
+	# post = Post()
+	# post.name = "Leonardo Ribeiro"
+	# post.content = "Minha tia se chama Deiliete"
+	# post.status = "Published"
+	# post.category = category_python
+	# post.save()
 
 
 	# Viu que louco? nao precisei passar id, atribui o proprio objeto.
 
 
 	context = {
-		'categories': category,
-		'post': post
+		'categories': category
 	}
 
 # aqui eu crio um registro na model category 
