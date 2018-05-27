@@ -6,6 +6,11 @@ from django.db import models
 class Category(models.Model):
 	name = models.CharField(max_length=255)
 
+	# Toda vez que chamar esse model, ele vai retornar o nome do objeto.
+	# a funcao abaixo serve pra isso
+	def __unicode__(self):
+		return self.name
+
 class Post(models.Model):
 
 	# AQUI EM CIMA EU CONSIGO CRIAR UMA CHAVE ESTRANGEIRA FACILMENTE
@@ -26,3 +31,8 @@ class Post(models.Model):
 
 	status = models.CharField(max_length=20, choices=STATUS_CHOICE, default='Draft')
 	created_at = models.DateTimeField(auto_now_add=True)
+
+	# Toda vez que chamar esse model, ele vai retornar o nome do objeto.
+	# a funcao abaixo serve pra isso
+	def __unicode__(self):
+		return self.content
