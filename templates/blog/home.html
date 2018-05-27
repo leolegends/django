@@ -1,13 +1,8 @@
-<!doctype html>
-	<html lang="pt">
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="http://localhost/django/templates/assets/css/bootstrap.min.css">
+{% extends "layout/layout.html" %}
 
-		<title>Django Projetinho</title>
-	</head>
-	<body>
-		<div class="container">
+{% block title %} Home 2 {% endblock %}
+
+{% block content %}
 			<h1>Leonardo</h1>
 			<ul>
 				{%for category in categories%}
@@ -29,6 +24,4 @@
 				</div>
 			</div>
 		</div>
-			
-	</body>
-</html>
+{% endblock %}
