@@ -2,16 +2,29 @@
 	<html lang="pt">
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="http://localhost/django/templates/assets/css/bootstrap.min.css">
+
 		<title>Django Projetinho</title>
 	</head>
 	<body>
-		<ul>
-			{%for category in categories%}
-				<li>{{category.name}}</li>
-			{%endfor%}
-		</ul>
-		<hr>
-		<!-- Ele faz os hasone e hasmany nativamente -->
-		<h2>{{post.name}} - {{post.category.name}}</h2>
+		<div class="container">
+			<h1>Leonardo</h1>
+			<ul>
+				{%for category in categories%}
+					<li>{{category.name}}</li>
+				{%endfor%}
+			</ul>
+			<hr>
+			<!-- Ele faz os hasone e hasmany nativamente -->
+			<div class="row">
+				<div class="col-md-6">
+					{%for post in posts%}
+						<sup>{{post.name}}</sup>
+						<p>{{post.content}}</p>
+					{%endfor%}
+				</div>
+			</div>
+		</div>
+			
 	</body>
 </html>

@@ -20,15 +20,15 @@ def home(request):
 	# ]
 
 	# for language in languages:
-	# 	Category.objects.create(name=lang)
+	#Category.objects.create(name=lang)
 
 
 	# para pegar o post com a primary key = 1 usamos:
-	# post = Post.objects.get(pk=1)
+	posts = Post.objects.all()
 
 	# Para pegar categoria 
 
-	# category_python = Category.objects.get(name='PHP')
+	category_python = Category.objects.get(name='PHP')
 
 	# post = Post()
 	# post.name = "Leonardo Ribeiro"
@@ -42,7 +42,8 @@ def home(request):
 
 
 	context = {
-		'categories': category
+		'categories': category,
+		'posts':posts
 	}
 
 # aqui eu crio um registro na model category 
